@@ -46,3 +46,15 @@ const presidents = [
   { first: "Barack", last: "Obama", year: 1961, passed: undefined },
   { first: "Donald", last: "Trump", year: 1946, passed: undefined },
 ];
+
+// Challenge: using Array.prototype.map(), console.log the first and last names of each president from the given 'presidents' array.
+  // map() calls a provided callback function once for each element in an array, in order, and constructs a new array from the results.
+  //president is the current element that's being processed in the array.
+
+
+let prezName = presidents.map(nameCreator)
+function nameCreator(info){
+  return info.first + ' ' + info.last
+}
+console.log(prezName);
+
